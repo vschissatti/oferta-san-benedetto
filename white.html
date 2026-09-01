@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="it" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Il Cammino Spirituale di San Benedetto | Guida Devozionale Quotidiana</title>
+  <meta name="description" content="Percorso guidato di 7 minuti al giorno ideato da Padre Joseph Coleman per ritrovare la pace interiore, rafforzare la fede e coltivare la serenità familiare.">
+  <link rel="icon" href="images/favicon.png">
+
+  <!-- Google Fonts: Inter & Cinzel -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#fdfbf7',
+              100: '#f7f2e7',
+              200: '#eee0cb',
+              300: '#e0c7a5',
+              400: '#cda779',
+              500: '#b88b53',
+              600: '#9b6d3e',
+              700: '#7e5334',
+              800: '#67442f',
+              900: '#543929',
+              950: '#2e1c14',
+            },
+            holy: {
+              gold: '#D4AF37',
+              deepGold: '#AA7C11',
+              burgundy: '#5B1422',
+              navy: '#0F172A',
+              slate: '#1E293B',
+              cream: '#FAFAF7',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Cinzel', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FAFAF7;
+      color: #1E293B;
+      overflow-x: hidden;
+    }
+    .font-serif-title {
+      font-family: 'Cinzel', serif;
+    }
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #B88B53 0%, #D4AF37 50%, #8C622D 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .gold-border-glow {
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.15);
+    }
+    .modal-backdrop {
+      background-color: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(4px);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-brand-500 selection:text-white">
+
+  <!-- ==========================================
+       1. HEADER INSTITUCIONAL
+  =========================================== -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-stone-200 shadow-sm transition-all">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- LOGO & BRAND -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full bg-holy-burgundy text-holy-gold flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+          <!-- St. Benedict Cross Icon -->
+          <svg class="w-6 h-6 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="4" x2="12" y2="20"></line>
+            <line x1="7" y1="9" x2="17" y2="9"></line>
+            <circle cx="12" cy="12" r="9" class="opacity-30"></circle>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-serif-title text-base sm:text-lg font-bold text-slate-900 leading-tight">San Benedetto</span>
+          <span class="text-xs text-stone-500 font-medium tracking-wide uppercase">Percorso Devozionale</span>
+        </div>
+      </a>
+
+      <!-- DESKTOP NAVIGATION -->
+      <nav class="hidden md:flex items-center space-x-8">
+        <a href="#chi-siamo" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Chi Siamo</a>
+        <a href="#il-percorso" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Il Percorso</a>
+        <a href="#benefici" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Benefici</a>
+        <a href="#testimonianze" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Testimonianze</a>
+        <a href="#offerta" class="text-sm font-medium text-slate-600 hover:text-brand-600 transition-colors">Accedi</a>
+      </nav>
+
+      <!-- HEADER CTA BUTTON -->
+      <div class="flex items-center gap-3">
+        <a href="#offerta" class="inline-flex items-center gap-2 bg-holy-burgundy hover:bg-red-950 text-white font-medium text-sm px-4 py-2.5 rounded-lg shadow transition-all transform hover:-translate-y-0.5">
+          <svg class="w-4 h-4 text-holy-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+          </svg>
+          <span>Accedi (€37)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ==========================================
+       2. HERO SECTION (Dobra Principal)
+  =========================================== -->
+  <section class="relative pt-12 pb-20 md:pt-20 md:pb-28 overflow-hidden bg-gradient-to-b from-stone-100 via-holy-cream to-white">
+    <!-- Decorative background elements -->
+    <div class="absolute inset-0 opacity-5 pointer-events-none flex items-center justify-center">
+      <div class="w-[600px] h-[600px] rounded-full border-[30px] border-brand-500"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- HERO TEXT CONTENT -->
+        <div class="lg:col-span-7 text-center lg:text-left space-y-6">
+          
+          <!-- Category Tag -->
+          <div class="inline-flex items-center gap-2 bg-brand-100 border border-brand-300 px-3.5 py-1.5 rounded-full text-brand-800 text-xs font-semibold uppercase tracking-wider">
+            <svg class="w-4 h-4 text-holy-gold fill-current" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+            </svg>
+            <span>Guida Spirituale & Devozionale</span>
+          </div>
+
+          <!-- Main Title H1 -->
+          <h1 class="font-serif-title text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 leading-tight tracking-tight">
+            Ritrova la Pace Interiore e Rafforza la Tua Fede con la Pratica Quotidiana di <span class="gold-gradient-text">San Benedetto</span>
+          </h1>
+
+          <!-- Subheadline -->
+          <p class="text-base sm:text-lg text-slate-600 leading-relaxed font-normal max-w-2xl mx-auto lg:mx-0">
+            Un percorso guidato di <strong>7 minuti al giorno</strong> ideato da <em>Padre Joseph Coleman</em> per aiutarti a superare i momenti di incertezza, coltivare la speranza e ristabilire l'armonia nella tua casa.
+          </p>
+
+          <!-- Key Highlights Bullet Grid -->
+          <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-xl mx-auto lg:mx-0">
+            <div class="flex items-center gap-2.5 text-sm font-medium text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0">✓</span>
+              <span>7 Minuti di Ascolto Quotidiano</span>
+            </div>
+            <div class="flex items-center gap-2.5 text-sm font-medium text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0">✓</span>
+              <span>Guida alla Meditazione Cristiana</span>
+            </div>
+            <div class="flex items-center gap-2.5 text-sm font-medium text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0">✓</span>
+              <span>Protezione e Serenità Familiare</span>
+            </div>
+            <div class="flex items-center gap-2.5 text-sm font-medium text-slate-700">
+              <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center flex-shrink-0">✓</span>
+              <span>Accesso Immediato Digitale</span>
+            </div>
+          </div>
+
+          <!-- Hero CTA Box -->
+          <div class="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="#offerta" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-holy-burgundy hover:bg-stone-900 text-white font-semibold text-lg px-8 py-4 rounded-xl shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-0.5">
+              <svg class="w-5 h-5 text-holy-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+              </svg>
+              <span>Richiedi l'Accesso al Percorso (€37)</span>
+            </a>
+          </div>
+
+          <!-- Trust Badges Under CTA -->
+          <div class="flex items-center justify-center lg:justify-start gap-6 pt-2 text-xs text-stone-500 font-medium">
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M2.166 10.776a1 1 0 011.06-.257c1.07.433 2.082.9 3.01 1.48 1.455.91 3.25 2.19 5.342 4.14 3.738-4.996 7.42-8.318 10.87-10.366a1 1 0 011.026 1.716c-3.774 2.24-7.79 5.922-11.83 11.452a1 1 0 01-1.504.093c-2.3-2.14-4.27-3.565-5.908-4.588a18.8 18.8 0 00-3.326-1.63 1 1 0 01-.24-1.04z" clip-rule="evenodd"/></svg>
+              Garanzia 90 Giorni
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-slate-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+              Pagamento Sicuro SSL
+            </span>
+          </div>
+
+        </div>
+
+        <!-- HERO VISUAL MOCKUP -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md bg-white rounded-2xl p-6 shadow-2xl border border-stone-200 gold-border-glow">
+            
+            <!-- Badge top -->
+            <div class="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-holy-gold text-slate-950 text-xs font-bold px-4 py-1 rounded-full uppercase tracking-wider shadow">
+              Edizione Devozionale Digitale
+            </div>
+
+            <!-- Image preview card -->
+            <div class="relative mt-3 overflow-hidden rounded-xl bg-slate-950 text-white p-6 aspect-[4/5] flex flex-col justify-between shadow-inner">
+              <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('images/photo01.jpg');"></div>
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent"></div>
+              
+              <div class="relative z-10 flex justify-between items-start">
+                <span class="text-xs uppercase tracking-widest text-brand-300 font-serif-title">Padre Joseph Coleman</span>
+                <span class="bg-white/10 backdrop-blur text-xs px-2.5 py-1 rounded text-stone-200">Audio + PDF</span>
+              </div>
+
+              <div class="relative z-10 text-center space-y-3 py-6">
+                <div class="w-16 h-16 mx-auto rounded-full bg-holy-burgundy/80 border-2 border-holy-gold flex items-center justify-center shadow-lg">
+                  <svg class="w-8 h-8 text-holy-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="12" y1="4" x2="12" y2="20"></line>
+                    <line x1="7" y1="9" x2="17" y2="9"></line>
+                    <circle cx="12" cy="12" r="9" class="opacity-40"></circle>
+                  </svg>
+                </div>
+                <h3 class="font-serif-title text-xl font-bold text-white leading-snug">Il Cammino Spirituale di San Benedetto</h3>
+                <p class="text-xs text-stone-300">Guida alla Preghiera Quotidiana e alla Serenità dell'Anima</p>
+              </div>
+
+              <div class="relative z-10 border-t border-white/10 pt-3 flex justify-between items-center text-xs text-stone-400">
+                <span>7 Minuti al Giorno</span>
+                <span class="text-holy-gold font-semibold">Formato Completo</span>
+              </div>
+            </div>
+
+            <!-- Features inside mockup box -->
+            <div class="mt-4 pt-3 border-t border-stone-100 flex items-center justify-between text-xs text-slate-600">
+              <span class="flex items-center gap-1">
+                <svg class="w-4 h-4 text-brand-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                Compatibile con Smartphone & Tablet
+              </span>
+              <span class="font-bold text-slate-900">37 €</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       3. SEÇÃO DE CONEXÃO & EMPATIA
+  =========================================== -->
+  <section id="chi-siamo" class="py-16 md:py-24 bg-white border-y border-stone-200">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <h2 class="text-xs uppercase tracking-widest text-brand-600 font-bold">Un Rifugio di Pace nel Caos Quotidiano</h2>
+        <p class="font-serif-title text-2xl sm:text-3xl font-bold text-slate-900">
+          Troppi Pensieri, Ansia Quotidiana e Poco Tempo per Riconnettersi?
+        </p>
+        <div class="w-16 h-1 bg-holy-gold mx-auto rounded-full"></div>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        
+        <!-- Text column -->
+        <div class="space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base">
+          <p>
+            Vivere nella società moderna comporta un carico emotivo e mentale sempre più pesante. Le preoccupazioni legate al lavoro, la stanchezza accumulate e la sensazione di correre continuamente senza mai trovare un momento di vera pace interiore possono distogliere l'anima dalla fede.
+          </p>
+          <p>
+            Spesso desideriamo dedicare tempo alla preghiera, ma le distrazioni quotidiane ci impediscono di mantenere una costanza spirituale regolare.
+          </p>
+          <p class="p-4 bg-brand-50 border-l-4 border-brand-500 rounded-r-lg font-medium text-slate-800 italic">
+            "La tradizione beneditina ci insegna che l'ordine spirituale porta serenità anche nei momenti di maggiore incertezza. Bastano pochi minuti di raccoglimento guidato per ritrovare equilibrio."
+          </p>
+          <p>
+            Attraverso il principio millenario dell'<em>Ora et Labora</em> (Prega e Lavora), il percorso ideato da <strong>Padre Joseph Coleman</strong> propone una disciplina semplice e accessibile a chiunque, pensata per portare armonia, calma emotiva e chiarezza mentale ogni giorno.
+          </p>
+        </div>
+
+        <!-- Author / Benedictine Tradition Card -->
+        <div class="bg-stone-50 rounded-2xl p-6 sm:p-8 border border-stone-200 shadow-sm space-y-6">
+          <div class="flex items-center gap-4">
+            <div class="w-16 h-16 rounded-full bg-slate-950 overflow-hidden flex-shrink-0 border-2 border-holy-gold">
+              <img src="images/imagem.jpg" alt="Padre Joseph Coleman" class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h4 class="font-serif-title text-lg font-bold text-slate-900">Padre Joseph Coleman</h4>
+              <p class="text-xs text-brand-700 font-medium">Guida Devozionale e Consulente Spirituale</p>
+            </div>
+          </div>
+
+          <div class="border-t border-stone-200 pt-4 space-y-3">
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">1</span>
+              <p class="text-xs text-slate-700"><strong>Chiarezza Mentale:</strong> Allontana lo stress e il rumore della vita moderna.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">2</span>
+              <p class="text-xs text-slate-700"><strong>Armonia Domestica:</strong> Rafforza il dialogo e la tranquillità in famiglia.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <span class="w-6 h-6 rounded-full bg-brand-100 text-brand-700 flex items-center justify-center font-bold text-xs flex-shrink-0 mt-0.5">3</span>
+              <p class="text-xs text-slate-700"><strong>Costanza Spirituale:</strong> 7 minuti di ascolto audio praticabili ovunque.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       4. SEÇÃO DO PROGRAMA (Módulos Incluídos)
+  =========================================== -->
+  <section id="il-percorso" class="py-16 md:py-24 bg-stone-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto space-y-4">
+        <span class="text-xs uppercase tracking-widest text-brand-700 font-bold">Struttura Del Programma</span>
+        <h2 class="font-serif-title text-2xl sm:text-4xl font-extrabold text-slate-900">
+          Cosa Comprende la Guida Devozionale
+        </h2>
+        <p class="text-sm sm:text-base text-slate-600">
+          Un percorso devozionale pratico e completo progettato per accompagnarti passo dopo passo.
+        </p>
+      </div>
+
+      <!-- Modules Grid -->
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Module 1 -->
+        <div class="bg-white rounded-xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-800 font-bold flex items-center justify-center text-sm font-serif-title">
+              01
+            </div>
+            <h3 class="font-serif-title text-lg font-bold text-slate-900">La Preghiera di 7 Minuti</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Audio devozionale quotidiano per iniziare o concludere la giornata in totale serenità, favorendo un riposo sereno e mente sgombra.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center text-xs text-brand-700 font-medium">
+            <span>Formato Audio MP3</span>
+          </div>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="bg-white rounded-xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-800 font-bold flex items-center justify-center text-sm font-serif-title">
+              02
+            </div>
+            <h3 class="font-serif-title text-lg font-bold text-slate-900">Scudo della Casa</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Riflessioni e preghiere dedicate alla protezione dell'armonia domestica, favorendo l'unione familiare e l'ascolto reciproco.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center text-xs text-brand-700 font-medium">
+            <span>Guida PDF Digitale</span>
+          </div>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="bg-white rounded-xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-800 font-bold flex items-center justify-center text-sm font-serif-title">
+              03
+            </div>
+            <h3 class="font-serif-title text-lg font-bold text-slate-900">La Chiave della Fiducia</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Guida pratica per gestire le preoccupazioni economiche e lavorative attraverso la fede, la saggezza razionale e l'azione retta.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center text-xs text-brand-700 font-medium">
+            <span>Guida Pratica PDF</span>
+          </div>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="bg-white rounded-xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-800 font-bold flex items-center justify-center text-sm font-serif-title">
+              04
+            </div>
+            <h3 class="font-serif-title text-lg font-bold text-slate-900">Restaurazione dell'Anima</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Momenti di meditazione cristiana e raccoglimento guidato per il benessere emotivo, la riduzione dell'ansia e lo stacco dallo stress.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center text-xs text-brand-700 font-medium">
+            <span>Meditazioni Guidate</span>
+          </div>
+        </div>
+
+        <!-- Module 5 -->
+        <div class="bg-white rounded-xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between md:col-span-2 lg:col-span-2">
+          <div class="space-y-3">
+            <div class="w-10 h-10 rounded-lg bg-brand-100 text-brand-800 font-bold flex items-center justify-center text-sm font-serif-title">
+              05
+            </div>
+            <h3 class="font-serif-title text-lg font-bold text-slate-900">Il Cammino Quotidiano</h3>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed">
+              Uno schema chiaro ed essenziale per organizzare la propria giornata in armonia tra impegni personali, famiglia e tempo di raccoglimento, secondo la tradizione benedettina.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-stone-100 flex items-center text-xs text-brand-700 font-medium">
+            <span>Planner Spirituale Stampabile</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       5. SEÇÃO DE BENEFÍCIOS
+  =========================================== -->
+  <section id="benefici" class="py-16 md:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-5 space-y-6">
+          <span class="text-xs uppercase tracking-widest text-brand-700 font-bold">Valore e Benessere</span>
+          <h2 class="font-serif-title text-2xl sm:text-4xl font-bold text-slate-900 leading-tight">
+            I Benefici del Percorso Devozionale
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 leading-relaxed">
+            La costante disciplina devozionale porta frutti concreti nel quotidiano, donando stabilità emotiva e una solida presenza interiore.
+          </p>
+          
+          <div class="pt-4">
+            <a href="#offerta" class="inline-flex items-center gap-2 bg-holy-burgundy text-white text-sm font-semibold px-6 py-3 rounded-lg shadow hover:bg-stone-900 transition-colors">
+              <span>Inizia il Percorso</span>
+              <svg class="w-4 h-4 text-holy-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+          
+          <!-- Benefit 1 -->
+          <div class="p-5 rounded-xl border border-stone-200 bg-stone-50 space-y-2">
+            <div class="w-8 h-8 rounded-full bg-holy-gold/20 text-holy-deepGold flex items-center justify-center font-bold text-sm">
+              ✝
+            </div>
+            <h4 class="font-serif-title text-base font-bold text-slate-900">Pace e Serenità Interiore</h4>
+            <p class="text-xs text-slate-600">Aiuta a placare i pensieri ricorrenti e a ritrovare la calma interiore nei momenti di tensione.</p>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="p-5 rounded-xl border border-stone-200 bg-stone-50 space-y-2">
+            <div class="w-8 h-8 rounded-full bg-holy-gold/20 text-holy-deepGold flex items-center justify-center font-bold text-sm">
+              🕊
+            </div>
+            <h4 class="font-serif-title text-base font-bold text-slate-900">Riduzione dello Stress</h4>
+            <p class="text-xs text-slate-600">La meditazione cristiana quotidiana promuove la concentrazione e allenta il carico d'ansia.</p>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="p-5 rounded-xl border border-stone-200 bg-stone-50 space-y-2">
+            <div class="w-8 h-8 rounded-full bg-holy-gold/20 text-holy-deepGold flex items-center justify-center font-bold text-sm">
+              🏠
+            </div>
+            <h4 class="font-serif-title text-base font-bold text-slate-900">Unione e Dialogo Familiare</h4>
+            <p class="text-xs text-slate-600">Crea un ambiente di ascolto e armonia per affrontare insieme le sfide di ogni giorno.</p>
+          </div>
+
+          <!-- Benefit 4 -->
+          <div class="p-5 rounded-xl border border-stone-200 bg-stone-50 space-y-2">
+            <div class="w-8 h-8 rounded-full bg-holy-gold/20 text-holy-deepGold flex items-center justify-center font-bold text-sm">
+              📖
+            </div>
+            <h4 class="font-serif-title text-base font-bold text-slate-900">Disciplina di Preghiera</h4>
+            <p class="text-xs text-slate-600">Un metodo strutturato in 7 minuti facile da integrare in qualsiasi routine quotidiana.</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       6. SEÇÃO DE TESTEMUNHOS (Compliant / Emotional Focus)
+  =========================================== -->
+  <section id="testimonianze" class="py-16 md:py-24 bg-stone-100 border-t border-stone-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto space-y-3">
+        <span class="text-xs uppercase tracking-widest text-brand-700 font-bold">Esperienze dei Fedeli</span>
+        <h2 class="font-serif-title text-2xl sm:text-4xl font-extrabold text-slate-900">
+          La Parola di Chi Ha Intrapreso il Percorso
+        </h2>
+        <p class="text-sm text-slate-600">
+          Testimonianze reali di fedeli che hanno ritrovato la serenità quotidiana.
+        </p>
+      </div>
+
+      <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Testimonial 1 -->
+        <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div class="space-y-4">
+            <!-- Stars -->
+            <div class="flex text-amber-400 gap-1 text-sm">★★★★★</div>
+            <p class="text-slate-600 text-xs sm:text-sm italic leading-relaxed">
+              "Negli ultimi mesi le preoccupazioni per la casa e il lavoro mi toglievano il sonno. Ascoltare la meditazione di 7 minuti la sera mi ha aiutata tantissimo a staccare la mente e a ritrovare la calma prima di dormire."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-stone-200 overflow-hidden flex-shrink-0">
+              <img src="images/photo02.jpg" alt="Lisa C." class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h5 class="text-xs font-bold text-slate-900">Lisa C.</h5>
+              <span class="text-[11px] text-stone-500">Milano</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex text-amber-400 gap-1 text-sm">★★★★★</div>
+            <p class="text-slate-600 text-xs sm:text-sm italic leading-relaxed">
+              "Cercavo un modo per mantenere la costanza nella preghiera ma con il mio lavoro non trovavo mai tempo. Questo percorso guidato da Padre Joseph è semplice, profondo ed essenziale."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-stone-200 overflow-hidden flex-shrink-0">
+              <img src="images/photo04.jpg" alt="Marco R." class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h5 class="text-xs font-bold text-slate-900">Marco R.</h5>
+              <span class="text-[11px] text-stone-500">Roma</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex text-amber-400 gap-1 text-sm">★★★★★</div>
+            <p class="text-slate-600 text-xs sm:text-sm italic leading-relaxed">
+              "Ha portato una nuova atmosfera di pace in famiglia. Condividiamo la lettura dei materiali durante il fine settimana ed è diventato un bellissimo momento di unione."
+            </p>
+          </div>
+          <div class="mt-6 pt-4 border-t border-stone-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-stone-200 overflow-hidden flex-shrink-0">
+              <img src="images/photo03.jpg" alt="Elena G." class="w-full h-full object-cover">
+            </div>
+            <div>
+              <h5 class="text-xs font-bold text-slate-900">Elena G.</h5>
+              <span class="text-[11px] text-stone-500">Torino</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       7. SEÇÃO DE OFERTA & VALOR (€37)
+  =========================================== -->
+  <section id="offerta" class="py-16 md:py-24 bg-white relative overflow-hidden">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="bg-gradient-to-b from-stone-50 to-stone-100 rounded-3xl p-6 sm:p-10 border-2 border-stone-300 shadow-xl gold-border-glow">
+        
+        <!-- Header Offerta -->
+        <div class="text-center space-y-3 pb-6 border-b border-stone-200">
+          <span class="bg-holy-burgundy text-holy-gold text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider">
+            Contributo Simbolico Sostenitore
+          </span>
+          <h2 class="font-serif-title text-2xl sm:text-3xl font-extrabold text-slate-900">
+            Accedi Ora al Percorso Spirituale Completo
+          </h2>
+          <p class="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto">
+            Il tuo contributo simbolico di <strong>37 €</strong> serve a sostenere la missione devozionale e la digitalizzazione continua dei materiali.
+          </p>
+        </div>
+
+        <!-- Price Display -->
+        <div class="py-8 text-center space-y-2">
+          <div class="flex items-center justify-center gap-2">
+            <span class="text-slate-400 line-through text-lg">€97</span>
+            <span class="font-serif-title text-4xl sm:text-5xl font-extrabold text-slate-900">€37</span>
+            <span class="text-xs font-semibold text-stone-500">Pagamento Unico</span>
+          </div>
+          <p class="text-xs text-emerald-700 font-medium">Nessun abbonamento o costo nascosto futuro</p>
+        </div>
+
+        <!-- Included List -->
+        <div class="max-w-md mx-auto space-y-3 mb-8 text-sm text-slate-700">
+          <div class="flex items-center gap-3">
+            <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs">✓</span>
+            <span>Programma di Áudio Devozionale di 7 Minuti (MP3)</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs">✓</span>
+            <span>Guida Digitale PDF "Scudo della Casa"</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs">✓</span>
+            <span>Manuale "La Chiave della Fiducia" e Planner Spirituale</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs">✓</span>
+            <span>Accesso Immediato via E-mail dopo la conferma</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="w-5 h-5 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs">✓</span>
+            <span>Assistenza e Suporto dedicato via WhatsApp</span>
+          </div>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="text-center space-y-4">
+          <a href="https://pay.hotmart.com" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-holy-burgundy hover:bg-slate-900 text-white font-bold text-lg px-10 py-4 rounded-xl shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-0.5">
+            <svg class="w-5 h-5 text-holy-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+            </svg>
+            <span>RICHIEDI L'ACCESSO IMMEDIATO (€37)</span>
+          </a>
+
+          <!-- Payment Guarantee Info -->
+          <div class="pt-4 border-t border-stone-200/80 max-w-lg mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-emerald-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+              <span><strong>Garanzia 90 Giorni:</strong> Soddisfatti o Rimborsati senza domande.</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       8. FOOTER COMPLETO DE COMPLIANCE (OBRIGATÓRIO)
+  =========================================== -->
+  <footer class="bg-slate-950 text-stone-400 text-xs py-12 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <!-- Footer Top Links -->
+      <div class="flex flex-wrap items-center justify-center gap-6 text-stone-300 font-medium">
+        <button onclick="openModal('terms-modal')" class="hover:text-holy-gold transition-colors">Termini di Servizio</button>
+        <span class="text-slate-700">•</span>
+        <button onclick="openModal('privacy-modal')" class="hover:text-holy-gold transition-colors">Informativa sulla Privacy (GDPR)</button>
+        <span class="text-slate-700">•</span>
+        <button onclick="openModal('refund-modal')" class="hover:text-holy-gold transition-colors">Politica di Rimborso</button>
+        <span class="text-slate-700">•</span>
+        <button onclick="openModal('contact-modal')" class="hover:text-holy-gold transition-colors">Contatti & Assistenza</button>
+      </div>
+
+      <!-- Support Info Box -->
+      <div class="text-center text-stone-400 space-y-1">
+        <p>Assistenza Clienti: <a href="mailto:supporto@camminosanbenedetto.com" class="text-holy-gold underline">supporto@camminosanbenedetto.com</a></p>
+        <p>Orari di Assistenza: Dal Lunedì al Venerdì dalle 09:00 alle 18:00 (Ora Italiana)</p>
+      </div>
+
+      <!-- Mandatory Disclaimers -->
+      <div class="max-w-4xl mx-auto space-y-4 text-center leading-relaxed text-[11px] text-stone-500 border-t border-slate-900 pt-6">
+        
+        <!-- Religious & Medical Disclaimer -->
+        <p>
+          <strong>Dichiarazione di Isenção Religiosa e Medica:</strong> I materiali e i contenuti presenti in questo programma sono destinati esclusivamente a scopi devozionali, educativi, di meditazione e di crescita personale. Non costituiscono e non sostituiscono in alcun modo un parere medico, psicologico, terapeutico o finanziario professionale. In caso di problematiche di salute o necessità diagnostiche, si invita a consultare un medico qualificato.
+        </p>
+
+        <!-- Meta / Facebook Disclaimer -->
+        <p>
+          <strong>Disclaimer Meta / Facebook:</strong> Questo sito non fa parte del sito web di Facebook o Facebook Inc. Inoltre, questo sito NON è approvato o sponsorizzato da Facebook in alcun modo. FACEBOOK è un marchio registrato di FACEBOOK, Inc.
+        </p>
+
+        <!-- Copyright -->
+        <p class="pt-2 text-stone-600">
+          © 2026 Il Cammino Spirituale di San Benedetto ®. Tutti i diritti riservati.
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ==========================================
+       MODALS DE COMPLIANCE (TERMS, PRIVACY, REFUND, CONTACT)
+  =========================================== -->
+
+  <!-- TERMS MODAL -->
+  <div id="terms-modal" class="hidden fixed inset-0 z-50 overflow-y-auto modal-backdrop flex items-center justify-center p-4">
+    <div class="bg-white text-slate-800 rounded-2xl max-w-2xl w-full p-6 sm:p-8 space-y-4 shadow-2xl relative max-h-[85vh] overflow-y-auto">
+      <button onclick="closeModal('terms-modal')" class="absolute top-4 right-4 text-stone-400 hover:text-slate-900 text-xl font-bold">&times;</button>
+      <h3 class="font-serif-title text-xl font-bold text-slate-900">Termini di Servizio</h3>
+      <div class="text-xs text-slate-600 space-y-3 leading-relaxed">
+        <p>Benvenuti sul sito "Il Cammino Spirituale di San Benedetto". Accedendo a questo sito o acquistando la guida devozionale, l'utente accetta di rispettare i presenti Termini e Condizioni.</p>
+        <p><strong>1. Uso dei Contenuti:</strong> I materiali audio e PDF forniti sono destinati all'uso personale e privato dell'acquirente. È vietata la riproduzione commerciale, la vendita o la redistribuzione non autorizzata.</p>
+        <p><strong>2. Natura del Servizio:</strong> Il programma ha valore puramente spirituale, devozionale ed educativo. Non garantisce risultati economici specifici né soluzioni mediche.</p>
+        <p><strong>3. Proprietà Intellettuale:</strong> Tutti i diritti d'autore relativi ai testi, file audio e grafiche appartengono al programma "Il Cammino Spirituale di San Benedetto".</p>
+      </div>
+      <div class="pt-4 text-right">
+        <button onclick="closeModal('terms-modal')" class="bg-slate-900 text-white px-5 py-2 rounded-lg text-xs font-semibold">Chiudi</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRIVACY MODAL -->
+  <div id="privacy-modal" class="hidden fixed inset-0 z-50 overflow-y-auto modal-backdrop flex items-center justify-center p-4">
+    <div class="bg-white text-slate-800 rounded-2xl max-w-2xl w-full p-6 sm:p-8 space-y-4 shadow-2xl relative max-h-[85vh] overflow-y-auto">
+      <button onclick="closeModal('privacy-modal')" class="absolute top-4 right-4 text-stone-400 hover:text-slate-900 text-xl font-bold">&times;</button>
+      <h3 class="font-serif-title text-xl font-bold text-slate-900">Informativa sulla Privacy (GDPR)</h3>
+      <div class="text-xs text-slate-600 space-y-3 leading-relaxed">
+        <p>La presente Informativa sulla Privacy descrive come vengono raccolti e trattati i dati personali degli utenti in conformità al Regolamento Generale sulla Protezione dei Dati (GDPR - UE 2016/679).</p>
+        <p><strong>1. Dati Raccolti:</strong> Raccolgiamo solo le informazioni necessarie per l'erogazione del servizio digitale (nome, e-mail per l'invio del materiale ed eventuali dati per la fatturazione).</p>
+        <p><strong>2. Finalità del Trattamento:</strong> I dati vengono utilizzati per la consegna del programma acquistato e per l'assistenza clienti via e-mail o WhatsApp.</p>
+        <p><strong>3. Diritti dell'Utente:</strong> L'utente ha il diritto di accedere, rettificare o richiedere la cancellazione dei propri dati in qualsiasi momento scrivendo a supporto@camminosanbenedetto.com.</p>
+      </div>
+      <div class="pt-4 text-right">
+        <button onclick="closeModal('privacy-modal')" class="bg-slate-900 text-white px-5 py-2 rounded-lg text-xs font-semibold">Chiudi</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- REFUND MODAL -->
+  <div id="refund-modal" class="hidden fixed inset-0 z-50 overflow-y-auto modal-backdrop flex items-center justify-center p-4">
+    <div class="bg-white text-slate-800 rounded-2xl max-w-2xl w-full p-6 sm:p-8 space-y-4 shadow-2xl relative max-h-[85vh] overflow-y-auto">
+      <button onclick="closeModal('refund-modal')" class="absolute top-4 right-4 text-stone-400 hover:text-slate-900 text-xl font-bold">&times;</button>
+      <h3 class="font-serif-title text-xl font-bold text-slate-900">Politica di Rimborso (Garanzia 90 Giorni)</h3>
+      <div class="text-xs text-slate-600 space-y-3 leading-relaxed">
+        <p>Offriamo una garanzia incondizionata di soddisfazione di <strong>90 giorni</strong> per consentire di provare il percorso in completa tranquillità.</p>
+        <p><strong>Come richiedere il rimborso:</strong> Se per qualsiasi motivo ritieni che il percorso non sia adatto a te entro 90 giorni dall'acquisto, invia una semplice e-mail a <em>supporto@camminosanbenedetto.com</em> indicando l'e-mail utilizzata per l'acquisto.</p>
+        <p>Procederemo al riaccredito del 100% dell'importo versato (€37) entro 3-5 giorni lavorativi senza alcuna penalità o richiesta di spiegazioni.</p>
+      </div>
+      <div class="pt-4 text-right">
+        <button onclick="closeModal('refund-modal')" class="bg-slate-900 text-white px-5 py-2 rounded-lg text-xs font-semibold">Chiudi</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT MODAL -->
+  <div id="contact-modal" class="hidden fixed inset-0 z-50 overflow-y-auto modal-backdrop flex items-center justify-center p-4">
+    <div class="bg-white text-slate-800 rounded-2xl max-w-lg w-full p-6 sm:p-8 space-y-4 shadow-2xl relative">
+      <button onclick="closeModal('contact-modal')" class="absolute top-4 right-4 text-stone-400 hover:text-slate-900 text-xl font-bold">&times;</button>
+      <h3 class="font-serif-title text-xl font-bold text-slate-900">Contatti & Assistenza</h3>
+      <div class="text-xs text-slate-600 space-y-3 leading-relaxed">
+        <p>Siamo a completa disposizione per qualsiasi domanda prima o dopo l'acquisto del percorso devozionale.</p>
+        <div class="p-4 bg-stone-50 rounded-xl border border-stone-200 space-y-2">
+          <p><strong>E-mail Supporto:</strong> supporto@camminosanbenedetto.com</p>
+          <p><strong>Supporto WhatsApp:</strong> Disponibile dopo la conferma d'ordine</p>
+          <p><strong>Orari:</strong> Dal Lunedì al Venerdì (09:00 - 18:00 CEST)</p>
+        </div>
+      </div>
+      <div class="pt-4 text-right">
+        <button onclick="closeModal('contact-modal')" class="bg-slate-900 text-white px-5 py-2 rounded-lg text-xs font-semibold">Chiudi</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL JAVASCRIPT -->
+  <script>
+    function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+    function closeModal(modalId) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+    }
+    // Close modal on click outside content
+    window.addEventListener('click', function(event) {
+      const modals = ['terms-modal', 'privacy-modal', 'refund-modal', 'contact-modal'];
+      modals.forEach(id => {
+        const modal = document.getElementById(id);
+        if (event.target === modal) {
+          closeModal(id);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
