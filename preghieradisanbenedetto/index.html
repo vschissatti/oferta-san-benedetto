@@ -21,7 +21,7 @@ src="https://www.facebook.com/tr?id=1019272401113982&ev=PageView&noscript=1"
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vatican News – Diretta Streaming | Vatican Media</title>
 <meta name="description" content="Guarda la diretta streaming ufficiale di Vatican News. Le ultime notizie dalla Santa Sede, dal Papa e dalla Chiesa nel mondo.">
-<link rel="icon" href="images/favicon.png">
+<link rel="icon" href="/images/favicon.png">
 
 <style>
 /* ===== RESET ===== */
@@ -416,7 +416,7 @@ input{font-family:inherit;font-size:14px}
   <!-- CANAL + AÇÕES -->
   <div class="yt-below">
     <div class="yt-channel-info">
-      <div class="yt-ch-avatar"><img src="images/imagem.jpg" alt="channel"></div>
+      <div class="yt-ch-avatar"><img src="/images/imagem.jpg" alt="channel"></div>
       <div class="yt-ch-meta">
         <span class="yt-ch-name">
           Padre Giuseppe Coleman
@@ -480,7 +480,7 @@ input{font-family:inherit;font-size:14px}
 
       <!-- Mensagem 1 -->
       <div class="lc-msg">
-        <div class="lc-avatar"><img src="images/02.jpg" alt="marco"></div>
+        <div class="lc-avatar"><img src="/images/02.jpg" alt="marco"></div>
         <div class="lc-body">
           <span class="lc-handle">@marco_rossi47</span>
           <span class="lc-text">sono arrivato presto… vediamo 🙏</span>
@@ -488,7 +488,7 @@ input{font-family:inherit;font-size:14px}
       </div>
       <!-- Mensagem 2 — foto 03.jpg (feminino) -->
       <div class="lc-msg">
-        <div class="lc-avatar"><img src="images/03.jpg" alt="sofia"></div>
+        <div class="lc-avatar"><img src="/images/03.jpg" alt="sofia"></div>
         <div class="lc-body">
           <span class="lc-handle">@sofia.bianchi_</span>
           <span class="lc-text">qualcun altro si è appena collegato?</span>
@@ -512,7 +512,7 @@ input{font-family:inherit;font-size:14px}
       </div>
       <!-- Mensagem 5 — foto 04.jpg (feminino) -->
       <div class="lc-msg">
-        <div class="lc-avatar"><img src="images/04.jpg" alt="emilia"></div>
+        <div class="lc-avatar"><img src="/images/04.jpg" alt="emilia"></div>
         <div class="lc-body">
           <span class="lc-handle">@emilia.ferrari_</span>
           <span class="lc-text">pace a tutti voi qui ✨</span>
@@ -536,7 +536,7 @@ input{font-family:inherit;font-size:14px}
       </div>
       <!-- Mensagem 8 — foto 01.jpg (masculino) -->
       <div class="lc-msg">
-        <div class="lc-avatar"><img src="images/01.jpg" alt="michele"></div>
+        <div class="lc-avatar"><img src="/images/01.jpg" alt="michele"></div>
         <div class="lc-body">
           <span class="lc-handle">@michele_santi</span>
           <span class="lc-text">In ascolto dalla Parrocchia di San Benedetto 🙏</span>
@@ -568,7 +568,7 @@ input{font-family:inherit;font-size:14px}
       </div>
       <!-- Mensagem 12 — foto 05.jpg (feminino) -->
       <div class="lc-msg">
-        <div class="lc-avatar"><img src="images/05.jpg" alt="angela"></div>
+        <div class="lc-avatar"><img src="/images/05.jpg" alt="angela"></div>
         <div class="lc-body">
           <span class="lc-handle">@angela_ricci</span>
           <span class="lc-text">Questo sacerdote ha aiutato tante persone qui</span>
@@ -855,7 +855,7 @@ input{font-family:inherit;font-size:14px}
 
     var avatarHtml = '';
     if(options.photo){
-      avatarHtml = '<div class="lc-avatar"><img src="images/'+options.photo+'.jpg" alt="" onerror="this.parentNode.style.background=\''+(options.bg||'#888')+'\';this.remove();this.parentNode.textContent=\''+handle.replace('@','').charAt(0).toUpperCase()+'\'"></div>';
+      avatarHtml = '<div class="lc-avatar"><img src="/images/'+options.photo+'.jpg" alt="" onerror="this.parentNode.style.background=\''+(options.bg||'#888')+'\';this.remove();this.parentNode.textContent=\''+handle.replace('@','').charAt(0).toUpperCase()+'\'"></div>';
     } else {
       var letter = handle.replace('@','').charAt(0).toUpperCase();
       avatarHtml = '<div class="lc-avatar" style="background:'+(options.bg||'#888')+'">'+letter+'</div>';
