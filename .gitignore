@@ -3,3 +3,8 @@ Thumbs.db
 *.tmp
 .idea/
 .vscode/
+
+# Ignore large video files from Git repo (pushed directly to VPS or CDN)
+*.mp4
+*.mov
+*.avi
